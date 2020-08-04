@@ -5,12 +5,30 @@
 
 
 <body>
-    <h1 id="hello">Hello World</h1>
-    <h1 id="hello">Hello</h1>
 
+    <div  id="hello">
+
+        <div>
+            <h1 id="robin"> I am Robin</h1>
+
+            <button   class="btn1">Change My Color</button>
+
+            <button  class="btn1">Change My FontSize</button>
+          
+        </div>
+       
+    </div>
+   
+   
     <p class="hello"></p>
     <p class="hello"></p>
 
+
+
+<input type="text" id="input1">
+
+
+<input type="text" id="input2">
 
 
 <script  src="index.js"></script>
@@ -25,11 +43,125 @@
 <script>
 
 
+
+//console.log(document.querySelectorAll("h1"));
+
+var dom=document.getElementById("hello");
+
+
+//console.log(dom.innerHTML);// this is how you grab the inner html of an element
+
+
+//console.log(dom.innerText); // this is how you grab the inner text of the element
+
+
+
+
+// grabbing element with the id
+
+
+
+
+
+
+
+
+/////
+//ele.innerText="I am really a robin";
+
+//ele.style.color="green";
+/*
+ele.style.fontFamily="Arial, Helvetica, sans-serif";
+
+ele.style.fontSize="100px";
+
+console.log(ele.style);
+*/
+
+
+//console.log(document);
 // dom 
 
 
 ///alert("Javascript is active");
 
+
+
+///let btn1=document.getElementById("btn1");
+
+/// some event called button click is happening and then th ebelow functionis called 
+/*
+function changecolor()
+{
+
+    // it changes the color of this element
+    var ele=document.getElementById("robin"); // you can change text
+
+
+    ele.style.color="pink";
+
+
+   /// console.log("Hi button is clicked");
+}
+*/
+
+
+document.getElementById("robin").addEventListener("mouseover",function(){
+
+
+    var ele=document.getElementById("robin"); // you can change text
+
+
+ele.style.color="purple";
+
+
+
+
+
+})
+
+
+document.getElementById("robin").addEventListener("mouseout",function(){
+
+
+var ele=document.getElementById("robin"); // you can change text
+
+
+ele.style.color="blue";
+
+
+
+
+
+})
+
+
+/// 
+
+
+console.log();
+
+
+
+///Attaching events to particular elements of the collection
+
+let eles=document.getElementsByClassName("btn1");
+
+for(var i=0;i<eles.length;i++)
+{
+
+    eles[i].addEventListener("click",function(){
+
+        console.log("btn clicked");
+
+    })
+}
+
+
+
+
+
+document.getElementById("input1").value; // you can acces the value properties of input
 
     </script>
 
