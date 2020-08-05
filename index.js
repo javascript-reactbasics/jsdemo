@@ -30,6 +30,7 @@
 
 //DATA OBJECT MODEL 
 
+//The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
 // we have some properties for document object model
 
 //document.getElementById("id_of_html_element");
@@ -37,3 +38,8 @@
 // document.querySelector("#")  -->for id
 // document.querySelector(".classname") -> for class
 // docuemt.querySelectorAll ()
+
+// window
+
+
+
