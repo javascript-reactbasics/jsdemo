@@ -20,7 +20,9 @@
 
 // Apart from this   everything in js is object 
 
-// object.prototupes 
+// object.prototypes
+
+
 
 
 
