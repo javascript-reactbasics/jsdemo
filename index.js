@@ -41,5 +41,6 @@
 
 // window
 
-
+///  so first thing js is single threaded 
+// creating athread is possible with owroker threads 
 

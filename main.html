@@ -1,0 +1,26 @@
+<html>
+  <head> </head>
+
+  <h1 id="mydata">Loading Data...........</h1>
+
+  <body>
+    <script>
+      // just think this function gets you data in 10 seconds
+      function apidata(callback) {
+        //mimicking reading file or getting data from api (they both have some delay in their operation);
+        setTimeout(() => {
+          return callback("The data is ready ");
+        }, 10000);
+      }
+
+      function mycallback(data) {
+        document.getElementById("mydata").innerText =
+          "the data from api " + data;
+      }
+
+      // so here I am fetching the data from the api
+
+      var data = apidata(mycallback);
+    </script>
+  </body>
+</html>
