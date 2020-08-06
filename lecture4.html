@@ -1,0 +1,63 @@
+<html>
+<head>
+
+
+
+</head>
+
+
+<body>
+
+<input type="text" id="i1">
+
+<input type="text" id="i2">
+
+
+
+<button id="btn1">Add</button>
+
+<p id="show"></p>
+
+
+
+<script>
+
+
+
+
+// callback has a wide definition
+// asynchronous way 
+
+
+document.getElementById("btn1").addEventListener("click",function(){
+
+
+
+    let input1=document.getElementById("i1").value;
+let input2=document.getElementById("i2").value;
+
+
+let val=Number(input1)+Number(input2);
+
+document.getElementById("show").innerText=val;
+
+
+
+
+
+
+})
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+
+</html>
