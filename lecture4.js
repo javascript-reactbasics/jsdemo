@@ -1,6 +1,6 @@
 //Lecture 4 // 
 
-// let and cost ,scopes in js and hoisting // 
+// let and const ,scopes in js// 
 
 // 
 
@@ -23,7 +23,7 @@ console.log("printing const",num2);
 
 // difference between let and const
 
-//num2=56; /// and you cant assign a new value to the variable declared with the const 
+//num2=56; /// and you cant ASSIGN a new value to the variable declared with the const 
 console.log("printing const",num2);
 
 
@@ -100,8 +100,8 @@ const v3=4;
 
 }
 
-
-// console.log(v2,v3);
+//console.log(v1);
+//console.log(v2,v3);
 
 if(false)
 {
@@ -111,7 +111,7 @@ if(false)
 }
 
 else{
-    //var yu=888;
+    var yu=888;
 }
 
 {
@@ -121,11 +121,11 @@ var num22=999
 
 for(var i=0;i<2;i++)
 {
-   // var num23=77
+var num23=77
 }
 
 
-///console.log(num1,num22,num23,yu,a2);
+console.log(num22,num23,yu);
 
 // what is a functional scope?
 
@@ -139,7 +139,7 @@ for(var i=0;i<2;i++)
 function checkvar()
 {
 
-   /// console.log("from function",b1);
+    console.log("from function",b1);
 }
 
 checkvar();
