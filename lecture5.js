@@ -46,7 +46,7 @@ let ar = [1, "logan", true, undefined, null];
 
 // json always have a string key and js object may or may not have it
 
-// json
+// This is an example of an object
 let json = {
   name: "John",
   location: "PA",
