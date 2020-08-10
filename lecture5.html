@@ -1,93 +1,79 @@
 <html>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+  />
 
+  <head>
+    <script src="/lecture5.js"></script>
+    <link rel="stylesheet" href="style5.css" />
+  </head>
 
-
-<head>
-<script  src="/lecture5.js"></script>
-
-</head>
-
-<body>
-
-<div  class="container">
-
-
-    <div class="row" style="margin-top:70px;">
-
-<div class="col-md-8 col-md-offset-4" >
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkCSoUgIOz3nseUHo_hdt9a61Z_pnZOTz-qafJIGVGL7DYl17&s" alt="" id="image">
-
-
-</div>
-
-<button class="btn btn-default">
- Left  
-</button>
-
-
-<button class="btn btn-default" style="float: right;" id="right">
-    Right
-   </button>
-
-
-
+  <body>
+    <h1>The Flower Image Slider</h1>
+    <div class="container">
+      <div class="row" style="margin-top: 70px;">
+        <div class="col-md-8 col-md-offset-4 flex">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkCSoUgIOz3nseUHo_hdt9a61Z_pnZOTz-qafJIGVGL7DYl17&s"
+            alt=""
+            id="image"
+          />
         </div>
 
+        <button class="btn btn-default flex" id="left">
+          Left
+        </button>
 
+        <button class="btn btn-default flex" style="float: right;" id="right">
+          Right
+        </button>
+      </div>
+    </div>
 
-</div>
+    <script>
+      // created an array of images
 
+      let arr = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkCSoUgIOz3nseUHo_hdt9a61Z_pnZOTz-qafJIGVGL7DYl17&s",
+        "https://farm8.staticflickr.com/7894/40346864723_6f9eef15df_c.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO7KPVM6S06_Z4uNIXqvS1LB958QdbzogGbiqJA6kW0qrIKPA0&s",
+      ];
 
-<script>
+      document.getElementById("right").addEventListener("click", function () {
+        let currentimage = document.getElementById("image").src;
 
+        /// find the index of the  value form array
 
-// created an array of images
+        let index = arr.indexOf(currentimage);
 
-let arr=[
+        console.log(index);
+        console.log('The current index is',index);
+        console.log('The length of the array is',arr.length);
 
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkCSoUgIOz3nseUHo_hdt9a61Z_pnZOTz-qafJIGVGL7DYl17&s",
-"https://farm8.staticflickr.com/7894/40346864723_6f9eef15df_c.jpg",
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO7KPVM6S06_Z4uNIXqvS1LB958QdbzogGbiqJA6kW0qrIKPA0&s"
+        if (index == arr.length - 1) {
+          console.log('We are at the end, setting the index to the original element');
+          index = -1;
+          currentimage = document.getElementById("image").src = arr[index + 1];
+        } else {
+          currentimage = document.getElementById("image").src = arr[index + 1];
+        }
+      });
 
+      document.getElementById("left").addEventListener("click", function () {
+        let currentimage = document.getElementById("image").src;
 
+        let index = arr.indexOf(currentimage);
 
-]
+        console.log(index);
 
+        if (index == 0) {
+          index = arr.length;
+        }
 
-
-
-document.getElementById("right").addEventListener("click",function()
-{
-
-
-let currentimage= document.getElementById("image").src;
-
-
-/// find the index of the  value form array
-
-let index=arr.indexOf(currentimage);
-
-
-
-
-console.log(index);
-
-
-
-
-
-})
-
-
-</script>
-
-
-
-</body>
-
-
-
+        currentimage = document.getElementById("image").src = arr[index - 1];
+      });
+    </script>
+  </body>
 </html>
