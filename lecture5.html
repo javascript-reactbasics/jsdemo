@@ -7,12 +7,14 @@
 
   <head>
     <script src="/lecture5.js"></script>
+    <link rel="stylesheet" href="style5.css" />
   </head>
 
   <body>
+    <h1>The Flower Image Slider</h1>
     <div class="container">
       <div class="row" style="margin-top: 70px;">
-        <div class="col-md-8 col-md-offset-4">
+        <div class="col-md-8 col-md-offset-4 flex">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkCSoUgIOz3nseUHo_hdt9a61Z_pnZOTz-qafJIGVGL7DYl17&s"
             alt=""
@@ -20,11 +22,11 @@
           />
         </div>
 
-        <button class="btn btn-default" id="left">
+        <button class="btn btn-default flex" id="left">
           Left
         </button>
 
-        <button class="btn btn-default" style="float: right;" id="right">
+        <button class="btn btn-default flex" style="float: right;" id="right">
           Right
         </button>
       </div>
@@ -47,9 +49,12 @@
         let index = arr.indexOf(currentimage);
 
         console.log(index);
+        console.log('The current index is',index);
+        console.log('The length of the array is',arr.length);
 
-        if (index >= arr.length) {
-          index = -2;
+        if (index == arr.length - 1) {
+          console.log('We are at the end, setting the index to the original element');
+          index = -1;
           currentimage = document.getElementById("image").src = arr[index + 1];
         } else {
           currentimage = document.getElementById("image").src = arr[index + 1];
@@ -62,6 +67,10 @@
         let index = arr.indexOf(currentimage);
 
         console.log(index);
+
+        if (index == 0) {
+          index = arr.length;
+        }
 
         currentimage = document.getElementById("image").src = arr[index - 1];
       });
