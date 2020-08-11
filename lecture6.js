@@ -109,7 +109,7 @@ setInterval(function(){
     document.getElementById('date').innerText = days +'D ' + hours +'H ' + minutes +'M '+ seconds + 'S';
 
 
-})
+},1000);
 
 // var days = launch.diff(current, 'days');
 // console.log(days,'days');
@@ -167,47 +167,47 @@ for (let i=0;i<10;i++)
 // this forEach loop works only with arrays
 
 
-// synchronous callback
-let arr=[1,2,3,"foo","bar","baaz"];
+// // synchronous callback
+// let arr=[1,2,3,"foo","bar","baaz"];
 
 
-// this is function declar
+// // this is function declar
 
-function myForEach(arr,cb)
-{
-
-
-    cb(arr);
+// function myForEach(arr,cb)
+// {
 
 
+//     cb(arr);
 
 
-}
 
 
-function callback(data)
-{
+// }
 
 
-    for(let i=0;i<data.length;i++)
-    {
-
-        console.log("from my foreach",data[i]);
-    }
+// function callback(data)
+// {
 
 
-}
+//     for(let i=0;i<data.length;i++)
+//     {
+
+//         console.log("from my foreach",data[i]);
+//     }
 
 
-myForEach(arr,callback);
+// }
 
 
-// asynchronous callbacks 
+// myForEach(arr,callback);
 
-// setTimeout is asynchronous 
 
-console.log(moment().format("YYYY-MM-DD HH:mm:ss"))
+// // asynchronous callbacks 
 
-document.getElementById("date").innerText=moment().format("YYYY-MM-DD HH:mm:ss");
+// // setTimeout is asynchronous 
 
-// additionally after every 10 second
+// console.log(moment().format("YYYY-MM-DD HH:mm:ss"))
+
+// document.getElementById("date").innerText=moment().format("YYYY-MM-DD HH:mm:ss");
+
+// // additionally after every 10 second
