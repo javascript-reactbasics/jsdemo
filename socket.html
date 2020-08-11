@@ -1,0 +1,38 @@
+<html>
+
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+<script>
+
+
+var socket= new WebSocket('wss://bfrates.com:8888?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2VudGlkIjoibGFnYWlraGFpIiwiZGF0ZXRpbWUiOjE1OTYwOTEwNDAwMjksImlhdCI6MTU5NjA5MTA0MH0.S4VyNZ9WKNkC_U5rS6Vgu3QHntfbp2ShjrwFvSotGCU');
+
+
+socket.onopen = function(e) {
+  console.log("[open] Connection established");
+ 
+socket.send('{"action":"set","markets":"8740"}');
+   
+};
+
+
+socket.onmessage = function(event) {
+    console.log(event.data)
+};
+
+
+socket.onerror = function(error) {
+  console.log(`[error] ${error.message}`);
+};
+
+
+
+</script>
+
+ 
+
+</body>
+
+</html>

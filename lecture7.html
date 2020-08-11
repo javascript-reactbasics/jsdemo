@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="username">
+
+<input type="text" id="password">
+
+<button id="btn">Submit</button>
+
+
+
+
+    <h1 id="head">I am heading</h1>
+
+    <h1>Second heading</h1>
+
+
+    <script src="lecture7.js"></script>
+
+
+<script>
+ // document.getElementById("head").style.color="green";
+
+//$("#head").css("color","pink");
+
+//document.getElementById("head").innerText="changed text";
+
+//$("#head").text("Changed Text");
+
+
+//document.getElementById("head").innerHTML="<span>I am from span</span>"
+//$("#head").html("<span>I am from span</span>");
+
+//let val=document.getElementById("username").value;
+
+//console.log(val);
+
+/*
+
+
+$("#btn").click(function(){
+
+
+})
+
+*/
+
+
+$("#btn").on("click",()=>{
+
+
+    // document.getElementById("username").value;
+    let username=$("#username").val();
+
+    let password=$("#password").val();
+
+
+    console.log(username);
+
+    console.log(password);
+
+
+
+})
+
+
+
+let elem=document.getElementById("username");
+
+
+elem.addEventListener("change",function(){
+
+
+})
+
+elem.addEventListener("keypress",function(){
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>
