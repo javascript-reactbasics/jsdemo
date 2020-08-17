@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form method="post"  >
+
+        <input type="text" id="name" name="name">
+
+        <button type="button" id="submit">Submit</button>
+
+
+    </form>
+
+
+    <h3 id="heading"></h3>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+
+
+$("#submit").on("click",function(){
+
+    let name=$("#name").val();
+
+
+    $.ajax({
+   method:"post",
+   url:"http://localhost:4000/formsubmit",
+   
+   data:{name:"Logan"},
+
+   success:function(data)
+   {
+       console.log("data",data);
+
+       getdata(data);
+   },
+
+   error:function(err)
+   {
+console.log("Error",err);
+   }
+
+
+
+
+
+});
+
+
+})
+
+
+function getdata(data)
+{
+    console.log("callback called");
+    $("#heading").text(data);
+
+}
+
+
+
+let obj={
+
+name:"Logan",
+getName:function()
+{
+
+    return this.name;
+}
+
+
+
+
+}
+
+
+
+
+</script>
+</body>
+</html>
