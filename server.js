@@ -10,10 +10,19 @@ app.use(cors());
 
 app.post("/formsubmit",(req,res)=>{
 
+console.log(req.body);
+    if(req.body.data=="send1")
+    {
+        res.json({message:"HEllo",data:["hi"]})
+    }
 
-    console.log(req.body);
-
-    res.send("hi there ,I am from server");
+    else  if(req.body.data=="send2"){
+        res.json({message:"HEllo",data:["hi","hello"]})
+    }
+    
+    else{
+        res.json({message:"HEllo",data:["hi","hello","there"]})
+    }
 
 
 })

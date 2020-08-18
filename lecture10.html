@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <table class="table table-bordered">
+<thead id="head">
+
+</thead>
+
+        
+
+
+    </table>
+
+
+<script src="lecture10.js"></script>
+
+
+<script>
+
+
+let dataa=[
+  {
+    "name": "Cohen Mcpherson",
+    "email": "cohenmcpherson@panzent.com",
+    "phone": "+1 (801) 580-3740",
+    "address": "749 Knight Court, Lithium, Hawaii, 2932"
+  },
+  {
+    "name": "Barron Mccall",
+    "email": "barronmccall@panzent.com",
+    "phone": "+1 (911) 483-2953",
+    "address": "699 Kathleen Court, Tyro, Kentucky, 4647"
+  },
+  {
+    "name": "Janis Meadows",
+    "email": "janismeadows@panzent.com",
+    "phone": "+1 (960) 474-2199",
+    "address": "938 Poplar Avenue, Ticonderoga, Northern Mariana Islands, 125"
+  },
+  {
+    "name": "Ashley Flynn",
+    "email": "ashleyflynn@panzent.com",
+    "phone": "+1 (807) 528-2103",
+    "address": "679 Micieli Place, Harborton, Virgin Islands, 4138"
+  },
+  {
+    "name": "Concetta Rocha",
+    "email": "concettarocha@panzent.com",
+    "phone": "+1 (947) 557-3015",
+    "address": "346 Alton Place, Camptown, Wisconsin, 5833"
+  },
+  {
+    "name": "Frazier Schroeder",
+    "email": "frazierschroeder@panzent.com",
+    "phone": "+1 (851) 491-3667",
+    "address": "494 Vermont Court, Franklin, Alabama, 8625"
+  },
+  {
+    "name": "Cleo Hunter",
+    "email": "cleohunter@panzent.com",
+    "phone": "+1 (983) 549-3461",
+    "address": "835 Coventry Road, Shasta, Kansas, 9739"
+  },
+  {
+    "name": "Britt Berg",
+    "email": "brittberg@panzent.com",
+    "phone": "+1 (997) 520-3787",
+    "address": "584 Just Court, Jardine, Minnesota, 7279"
+  },
+  {
+    "name": "Nadine Fox",
+    "email": "nadinefox@panzent.com",
+    "phone": "+1 (931) 479-3126",
+    "address": "868 Williams Court, Greenbush, Guam, 1453"
+  },
+  {
+    "name": "Carrillo Lawrence",
+    "email": "carrillolawrence@panzent.com",
+    "phone": "+1 (813) 487-3208",
+    "address": "766 Vandervoort Avenue, Mahtowa, Illinois, 2763"
+  },
+  {
+    "name": "Conrad Petty",
+    "email": "conradpetty@panzent.com",
+    "phone": "+1 (999) 590-2828",
+    "address": "816 Kenmore Terrace, Foxworth, Pennsylvania, 2029"
+  },
+  {
+    "name": "Hall Peterson",
+    "email": "hallpeterson@panzent.com",
+    "phone": "+1 (889) 417-2899",
+    "address": "318 Tehama Street, Starks, Ohio, 4141"
+  },
+  {
+    "name": "Rodriguez Hicks",
+    "email": "rodriguezhicks@panzent.com",
+    "phone": "+1 (897) 527-2330",
+    "address": "726 Bay Parkway, Sardis, American Samoa, 1038"
+  },
+  {
+    "name": "Rich Ford",
+    "email": "richford@panzent.com",
+    "phone": "+1 (994) 584-3916",
+    "address": "517 Little Street, Katonah, Utah, 8228"
+  },
+  {
+    "name": "Edith Sandoval",
+    "email": "edithsandoval@panzent.com",
+    "phone": "+1 (848) 485-2637",
+    "address": "121 Adelphi Street, Tampico, Georgia, 3116"
+  },
+  {
+    "name": "Lacey Casey",
+    "email": "laceycasey@panzent.com",
+    "phone": "+1 (888) 433-2346",
+    "address": "768 Walker Court, Fairfield, Montana, 2788"
+  },
+  {
+    "name": "Wells Rowland",
+    "email": "wellsrowland@panzent.com",
+    "phone": "+1 (853) 456-2011",
+    "address": "311 Harbor Lane, Singer, Maine, 2811"
+  },
+  {
+    "name": "Tillman Martinez",
+    "email": "tillmanmartinez@panzent.com",
+    "phone": "+1 (812) 487-3680",
+    "address": "322 Flatbush Avenue, Cecilia, Rhode Island, 9871"
+  },
+  {
+    "name": "Becky Villarreal",
+    "email": "beckyvillarreal@panzent.com",
+    "phone": "+1 (849) 446-3370",
+    "address": "386 Evans Street, Kylertown, Indiana, 4975"
+  },
+  {
+    "name": "Guy Moreno",
+    "email": "guymoreno@panzent.com",
+    "phone": "+1 (995) 578-2616",
+    "address": "697 Duryea Court, Whitmer, Marshall Islands, 660"
+  },
+  {
+    "name": "Carter Livingston",
+    "email": "carterlivingston@panzent.com",
+    "phone": "+1 (842) 573-3994",
+    "address": "233 Brigham Street, Golconda, New Mexico, 7037"
+  },
+  {
+    "name": "Ofelia Keller",
+    "email": "ofeliakeller@panzent.com",
+    "phone": "+1 (867) 461-3499",
+    "address": "146 Reed Street, Darrtown, South Dakota, 7158"
+  },
+  {
+    "name": "Riddle Benson",
+    "email": "riddlebenson@panzent.com",
+    "phone": "+1 (916) 438-2080",
+    "address": "569 Lincoln Avenue, Spelter, Washington, 5078"
+  },
+  {
+    "name": "Bailey Henson",
+    "email": "baileyhenson@panzent.com",
+    "phone": "+1 (805) 443-2300",
+    "address": "551 Thames Street, Tilden, Mississippi, 5850"
+  },
+  {
+    "name": "Grimes Pennington",
+    "email": "grimespennington@panzent.com",
+    "phone": "+1 (891) 452-3202",
+    "address": "887 Arkansas Drive, Loretto, North Carolina, 3634"
+  },
+  {
+    "name": "Beck Baird",
+    "email": "beckbaird@panzent.com",
+    "phone": "+1 (860) 441-2947",
+    "address": "571 Elmwood Avenue, Jennings, Colorado, 5642"
+  },
+  {
+    "name": "Barry Delgado",
+    "email": "barrydelgado@panzent.com",
+    "phone": "+1 (845) 518-3844",
+    "address": "668 Bushwick Place, Moquino, Virginia, 2668"
+  },
+  {
+    "name": "Tami Mcclure",
+    "email": "tamimcclure@panzent.com",
+    "phone": "+1 (841) 536-2805",
+    "address": "435 Locust Street, Ribera, New Hampshire, 1817"
+  },
+  {
+    "name": "Noelle Holcomb",
+    "email": "noelleholcomb@panzent.com",
+    "phone": "+1 (808) 566-2719",
+    "address": "699 Monitor Street, Bowden, Oklahoma, 1076"
+  },
+  {
+    "name": "Miles Crosby",
+    "email": "milescrosby@panzent.com",
+    "phone": "+1 (808) 481-2127",
+    "address": "714 Huron Street, Chautauqua, Iowa, 2779"
+  },
+  {
+    "name": "Hamilton Ortiz",
+    "email": "hamiltonortiz@panzent.com",
+    "phone": "+1 (981) 592-2810",
+    "address": "822 Montague Terrace, Ryderwood, Nevada, 2779"
+  },
+  {
+    "name": "Camacho Maxwell",
+    "email": "camachomaxwell@panzent.com",
+    "phone": "+1 (969) 592-3049",
+    "address": "638 Fayette Street, Irwin, Puerto Rico, 8750"
+  },
+  {
+    "name": "Lewis Pace",
+    "email": "lewispace@panzent.com",
+    "phone": "+1 (883) 511-3555",
+    "address": "168 Hamilton Avenue, Homeland, Idaho, 6666"
+  },
+  {
+    "name": "James Cook",
+    "email": "jamescook@panzent.com",
+    "phone": "+1 (900) 571-3888",
+    "address": "398 Whitwell Place, Biddle, Michigan, 3782"
+  },
+  {
+    "name": "Mcgowan Blair",
+    "email": "mcgowanblair@panzent.com",
+    "phone": "+1 (941) 494-3187",
+    "address": "576 Cass Place, Odessa, West Virginia, 9405"
+  },
+  {
+    "name": "Vonda Lyons",
+    "email": "vondalyons@panzent.com",
+    "phone": "+1 (892) 598-3020",
+    "address": "650 Pierrepont Place, Falconaire, Federated States Of Micronesia, 7832"
+  },
+  {
+    "name": "Goodwin Leblanc",
+    "email": "goodwinleblanc@panzent.com",
+    "phone": "+1 (871) 575-3466",
+    "address": "526 Lynch Street, Jacumba, Oregon, 8161"
+  },
+  {
+    "name": "Flossie Hurst",
+    "email": "flossiehurst@panzent.com",
+    "phone": "+1 (886) 492-3824",
+    "address": "202 Virginia Place, Sabillasville, Louisiana, 2307"
+  },
+  {
+    "name": "Rhodes Potts",
+    "email": "rhodespotts@panzent.com",
+    "phone": "+1 (838) 524-2670",
+    "address": "182 Bergen Street, Edgar, Tennessee, 3257"
+  },
+  {
+    "name": "Donovan Walter",
+    "email": "donovanwalter@panzent.com",
+    "phone": "+1 (958) 514-2476",
+    "address": "741 Hanover Place, Jackpot, Florida, 3180"
+  },
+  {
+    "name": "Lakisha Branch",
+    "email": "lakishabranch@panzent.com",
+    "phone": "+1 (879) 558-3290",
+    "address": "734 Lois Avenue, Sidman, Missouri, 4798"
+  },
+  {
+    "name": "Edna Hobbs",
+    "email": "ednahobbs@panzent.com",
+    "phone": "+1 (918) 400-3082",
+    "address": "550 Tudor Terrace, Clayville, Delaware, 6743"
+  },
+  {
+    "name": "Mckinney Watson",
+    "email": "mckinneywatson@panzent.com",
+    "phone": "+1 (807) 408-3934",
+    "address": "612 King Street, Ada, District Of Columbia, 2710"
+  },
+  {
+    "name": "Pearson Wallace",
+    "email": "pearsonwallace@panzent.com",
+    "phone": "+1 (856) 478-2329",
+    "address": "171 Bay Street, Otranto, New Jersey, 6962"
+  },
+  {
+    "name": "Lisa Mckay",
+    "email": "lisamckay@panzent.com",
+    "phone": "+1 (986) 544-2142",
+    "address": "778 Hornell Loop, Benson, Vermont, 537"
+  },
+  {
+    "name": "Gregory White",
+    "email": "gregorywhite@panzent.com",
+    "phone": "+1 (821) 420-2828",
+    "address": "815 Madison Place, Cresaptown, Palau, 3574"
+  },
+  {
+    "name": "Harriet Steele",
+    "email": "harrietsteele@panzent.com",
+    "phone": "+1 (929) 492-2104",
+    "address": "596 Pitkin Avenue, Austinburg, South Carolina, 1302"
+  },
+  {
+    "name": "Marsha Dunn",
+    "email": "marshadunn@panzent.com",
+    "phone": "+1 (963) 503-2059",
+    "address": "663 Harden Street, Swartzville, Arkansas, 6247"
+  },
+  {
+    "name": "Lupe Forbes",
+    "email": "lupeforbes@panzent.com",
+    "phone": "+1 (879) 419-2883",
+    "address": "924 Vanderbilt Avenue, Muir, California, 1292"
+  },
+  {
+    "name": "Gilda Head",
+    "email": "gildahead@panzent.com",
+    "phone": "+1 (824) 435-3692",
+    "address": "776 Gerald Court, Strykersville, Maryland, 9293"
+  },
+  {
+    "name": "Pamela Burks",
+    "email": "pamelaburks@panzent.com",
+    "phone": "+1 (822) 537-2371",
+    "address": "896 Devoe Street, Dola, New York, 4825"
+  },
+  {
+    "name": "Rowena Lowe",
+    "email": "rowenalowe@panzent.com",
+    "phone": "+1 (908) 580-3410",
+    "address": "561 Turnbull Avenue, Gibbsville, North Dakota, 4499"
+  },
+  {
+    "name": "Evangelina Galloway",
+    "email": "evangelinagalloway@panzent.com",
+    "phone": "+1 (983) 540-3037",
+    "address": "874 Furman Street, Stollings, Massachusetts, 3917"
+  },
+  {
+    "name": "Mona James",
+    "email": "monajames@panzent.com",
+    "phone": "+1 (820) 408-2351",
+    "address": "827 Hudson Avenue, Dexter, Nebraska, 1677"
+  },
+  {
+    "name": "Odonnell Parrish",
+    "email": "odonnellparrish@panzent.com",
+    "phone": "+1 (970) 475-2277",
+    "address": "834 Sutter Avenue, Cassel, Alaska, 979"
+  },
+  {
+    "name": "Macias Jordan",
+    "email": "maciasjordan@panzent.com",
+    "phone": "+1 (801) 457-3118",
+    "address": "778 Aurelia Court, Ivanhoe, Arizona, 3604"
+  },
+  {
+    "name": "Moore Dodson",
+    "email": "mooredodson@panzent.com",
+    "phone": "+1 (986) 525-2718",
+    "address": "575 Grove Place, Veguita, Texas, 5753"
+  },
+  {
+    "name": "Susanna Mcguire",
+    "email": "susannamcguire@panzent.com",
+    "phone": "+1 (816) 497-2142",
+    "address": "223 Coleman Street, Finderne, Connecticut, 7435"
+  }
+]
+
+
+
+
+let headers=Object.keys(dataa[0]);
+
+
+let html="";
+/*
+for(let i=0;i<headers.length;i++)
+{
+    
+    //html=`<th>${headers[i]}</th>${html}`;
+
+   
+}
+*/
+
+
+
+headers.forEach((ele,i)=>{
+
+    html+=`<th>${ele}</th>`; // template literals 
+
+
+
+})
+
+//html
+objec.items.forEach((ele)=>{
+
+
+})
+
+
+document.getElementById("head").innerHTML=html;
+
+
+
+
+
+////
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
