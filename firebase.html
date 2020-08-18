@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase</title>
-</head>
-<body>
+  </head>
+  <body>
+    <table>
+      <th>
+        Name
+      </th>
+      <th>
+        Location
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Hobbies
+      </th>
 
-<table>
-<th>
-   Name 
-</th>
-<th>
-    Location
-</th>
+      <tbody>
+        <tr>
+          <td id="data">No Data</td>
+          <td id="dataLocation">No Data</td>
+          <td id="dataAge">No Data</td>
+        </tr>
+      </tbody>
+    </table>
 
-<th>
-    Age
-</th>
-<th>
-    Hobbies
-</th>
+    <input type="text" id="input" placeholder="name" />
+    <input type="text" id="location" placeholder="location" />
+    <input type="text" id="age" placeholder="age" />
 
-<tbody id="data">
-<tr>
-    <td>No Data</td>
-</tr>
-</tbody>
+    <button onclick="sendData()">Submit</button>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
 
-</table>
-
-
-
-<input type="text" id="input">
-
-
-
-<button onclick="sendData()">Submit</button>
-
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
-
-
-<script src="firebase.js"></script>
-    
-</body>
+    <script src="firebase.js"></script>
+  </body>
 </html>
