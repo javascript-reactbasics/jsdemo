@@ -23,11 +23,34 @@
         $.ajax({
           method: "post",
           url: "http://localhost:4000/submittheform",
+    
 
           data: { name: name },
 
           success: function (data) {
-            console.log("This is the data", data);
+                /// calling another ajax called
+
+
+                $.ajax({
+          method: "post",
+          url: "http://localhost:4000/gettingData",
+          
+
+          data: { id: data.id },
+
+          success: function (data) {
+          
+
+
+            $.ajax({
+          method: "post",
+          url: "http://localhost:4000/gettingUserCollege",
+          
+
+          data: {username: data.username },
+
+          success: function (data) {
+            console.log("User Data",data);
 
             getdata(data);
           },
@@ -36,11 +59,39 @@
             console.log("Error", err);
           },
         });
+
+
+            //getdata(data);
+          },
+
+          error: function (err) {
+            console.log("Error", err);
+          },
+        });
+
+
+
+
+
+
+
+          //  getdata(data);
+          },
+
+          error: function (err) {
+            console.log("Error", err);
+          },
+        });
+
+/// i am gonna do some process here and
+
+
+
       });
 
       function getdata(data) {
         console.log("callback called");
-        $("#heading").text(data);
+        $("#heading").text(data.id);
       }
 
       let obj = {
